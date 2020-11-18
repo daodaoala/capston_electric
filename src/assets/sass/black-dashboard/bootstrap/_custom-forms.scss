@@ -164,7 +164,7 @@
 .custom-select {
   display: inline-block;
   width: 100%;
-  color: rgb(119, 113, 113);
+  color: rgb(139, 138, 138); //요금제 선택 글씨색
   height: $custom-select-height;
   padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x;
   line-height: $custom-select-line-height;
@@ -173,6 +173,7 @@
   background: $custom-select-bg $custom-select-indicator no-repeat right $custom-select-padding-x center;
   background-size: $custom-select-bg-size;
   border: $custom-select-border-width solid $custom-select-border-color;
+  border-width: medium;
   @if $enable-rounded {
     border-radius: $custom-select-border-radius;
   } @else {
@@ -182,7 +183,7 @@
   appearance: none;
 
   &:focus {
-    border-color: $custom-select-focus-border-color;
+    border-color: rgb(183, 100, 238); // $custom-select-focus-border-color;
     outline: 0;
     @if $enable-shadows {
       box-shadow: $custom-select-box-shadow, $custom-select-focus-box-shadow;
@@ -224,6 +225,7 @@
   padding-top: $custom-select-padding-y;
   padding-bottom: $custom-select-padding-y;
   font-size: $custom-select-font-size-sm;
+  //font-size: 20px;
 }
 
 .custom-select-lg {

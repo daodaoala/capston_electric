@@ -1,7 +1,6 @@
 <template>
   <div>
        <div>
-     
            <b-form-group label="전력 사용량 패턴 분석" icon="tim-icons icon-bulb-63">  
             <b-form-checkbox-group id="checkbox-group-2" v-model="selected" name="flavour-2">
               <b-form-checkbox value="graph-check">그래프 보기</b-form-checkbox>
@@ -35,7 +34,6 @@
               ></b-form-datepicker>
             </b-input-group-append>
           </b-input-group>
-      <!-- <p class="mb-1">value: '{{ value }}'</p> -->
       </b-col>
               </b-row>
             </b-col>
@@ -123,7 +121,7 @@
           </b-row>
         </b-col>
         <b-col cols="12" md="2">
-            <b-button disabled size="lg" variant="primary" style="height:60%;width:60%" >조회</b-button>
+            <b-button size="lg" variant="primary" style="height:60%;width:60%" >조회</b-button>
         </b-col>
           
       
@@ -242,15 +240,15 @@
   import UserTable from './Dashboard/UserTable';
   import config from '@/config';
   import { FormSelectPlugin } from 'bootstrap-vue';
-  import {Select, Option} from 'element-ui';
+ // import {Select, Option} from 'element-ui';
   export default {
     components: {
       LineChart,
       BarChart,
       TaskList,
-      UserTable,
-      [Select.name]: Select,
-      [Option.name]: Option
+      UserTable
+      //[Select.name]: Select,
+      //[Option.name]: Option
     },
     data() {
       return {

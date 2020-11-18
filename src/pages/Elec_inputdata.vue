@@ -1,13 +1,13 @@
 <template>
   <div>
-       <div>
-          <b-form-group label="입력변수 데이터 통계">
+    <div>
+        <b-form-group label="입력변수 데이터 통계" >  
             <b-form-checkbox-group id="checkbox-group-2" v-model="selected" name="flavour-2">
               <b-form-checkbox value="graph-check">그래프 보기</b-form-checkbox>
               <b-form-checkbox value="info-check">수치 정보 보기</b-form-checkbox>
             </b-form-checkbox-group>
-          </b-form-group>
-        </div>
+        </b-form-group>
+    </div>
     
       <b-row align-v="stretch">
         <b-col cols="12" md="10">
@@ -15,86 +15,80 @@
             <b-col cols="6">
               <b-row>
                 <b-col sm="3">시작 일자</b-col>
-                <b-col sm="7"> <b-input-group class="mb-3">
-            <b-form-input
-              id="example-input"
-              v-model="value"
-              type="text"
-              placeholder="YYYY-MM-DD"
-              autocomplete="off"
-            ></b-form-input>
-            <b-input-group-append>
-              <b-form-datepicker
-                v-model="value"
-                button-only
-                right
-                locale="en-US"
-                aria-controls="example-input"
-                @context="onContext"
-              ></b-form-datepicker>
-            </b-input-group-append>
-          </b-input-group>
-      <!-- <p class="mb-1">value: '{{ value }}'</p> -->
-      </b-col>
+                  <b-col sm="7"> 
+                    <b-input-group class="mb-3">
+                        <b-form-input
+                            id="example-input"
+                            v-model="value"
+                            type="text"
+                            placeholder="YYYY-MM-DD"
+                            autocomplete="off"
+                        ></b-form-input>
+                    <b-input-group-append>
+                        <b-form-datepicker
+                            v-model="value"
+                            button-only
+                            right
+                            locale="en-US"
+                            aria-controls="example-input"
+                            @context="onContext"
+                        ></b-form-datepicker>
+                    </b-input-group-append>
+                    </b-input-group>
+                  </b-col>
               </b-row>
             </b-col>
+
             <b-col cols="6">
                <b-row>
-                <b-col sm="3">요금제 조회</b-col>
-                <b-col sm="7"> <b-input-group class="mb-3">
-            <b-form-input
-              id="example-input"
-              v-model="value"
-              type="text"
-              placeholder="YYYY-MM-DD"
-              autocomplete="off"
-            ></b-form-input>
-            <b-input-group-append>
-              <b-form-datepicker
-                v-model="value"
-                button-only
-                right
-                locale="en-US"
-                aria-controls="example-input"
-                @context="onContext"
-              ></b-form-datepicker>
-            </b-input-group-append>
-          </b-input-group>
-     </b-col>
+                <b-col sm="3">입력변수 데이터</b-col>
+                <b-col sm="7"> <b-form-group>
+                  <b-form-radio-group 
+                    v-model="select"
+                    :options="option"
+                    name="radio-inline1"
+                  ></b-form-radio-group>
+                </b-form-group>
+                </b-col>
               </b-row>
             </b-col>
+
           </b-row>
+
           <b-row>
+
             <b-col cols="6">
               <b-row>
                 <b-col sm="3">종료 일자</b-col>
-                <b-col sm="7"> <b-input-group class="mb-3">
-            <b-form-input
-              id="example-input"
-              v-model="value"
-              type="text"
-              placeholder="YYYY-MM-DD"
-              autocomplete="off"
-            ></b-form-input>
-            <b-input-group-append>
-              <b-form-datepicker
-                v-model="value"
-                button-only
-                right
-                locale="en-US"
-                aria-controls="example-input"
-                @context="onContext"
-              ></b-form-datepicker>
-            </b-input-group-append>
-          </b-input-group>
-     </b-col>
+                    <b-col sm="7"> 
+                        <b-input-group class="mb-3">
+                            <b-form-input
+                                id="example-input"
+                                v-model="value"
+                                type="text"
+                                placeholder="YYYY-MM-DD"
+                                autocomplete="off"
+                            ></b-form-input>
+                        <b-input-group-append>
+                            <b-form-datepicker
+                                v-model="value"
+                                button-only
+                                right
+                                locale="en-US"
+                                aria-controls="example-input"
+                                @context="onContext"
+                            ></b-form-datepicker>
+                        </b-input-group-append>
+                        </b-input-group>
+                    </b-col>
               </b-row>
             </b-col>
+
             <b-col cols="6">
                <b-row>
-                <b-col sm="3">단위선택</b-col>
+                <b-col sm="3">단위 선택</b-col>
                 <b-col sm="7"> <b-form-group>
-                  <b-form-radio-group
+                  <b-form-radio-group 
                     v-model="selected"
                     :options="options"
                     name="radio-inline"
@@ -103,15 +97,16 @@
                 </b-col>
               </b-row>
             </b-col>
+
           </b-row>
         </b-col>
-        <b-col cols="12" md="2">
-            <b-button disabled size="lg" variant="primary" style="height:80%;width:80%">조회</b-button>
 
+        <b-col cols="12" md="2">
+            <b-button size="lg" variant="primary" style="height:60%;width:60%">조회</b-button>
         </b-col>
-          
-      
-      </b-row>
+
+    </b-row>
+
     <div class="row">
       <div class="col-12">
         <card type="chart">
@@ -225,16 +220,31 @@
   import TaskList from './Dashboard/TaskList';
   import UserTable from './Dashboard/UserTable';
   import config from '@/config';
-
+  import { FormSelectPlugin } from 'bootstrap-vue';
+ // import {Select, Option} from 'element-ui';
   export default {
     components: {
       LineChart,
       BarChart,
       TaskList,
       UserTable
+      //[Select.name]: Select,
+      //[Option.name]: Option
     },
     data() {
       return {
+        select: 'd',
+        option: [
+          { value: 'd', text: '변수1' },
+          { value: 'e', text: '변수2' },
+          { value: 'f', text: '변수3' }
+        ],
+        selected: 'A',
+        options: [
+          { value: 'A', text: '연간' },
+          { value: 'B', text: '월간' },
+          { value: 'C', text: '일간' }
+        ],
         bigLineChart: {
           allData: [
             [100, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100],
@@ -371,4 +381,5 @@
   };
 </script>
 <style>
+
 </style>

@@ -39,7 +39,7 @@
 //
 // Used for brand, project, or site names.
 
-.navbar-brand {
+.navbar-brand {  //메인 화면 로고 css
   display: inline-block;
   padding-top: $navbar-brand-padding-y;
   padding-bottom: $navbar-brand-padding-y;
@@ -47,7 +47,6 @@
   //font-size: $navbar-brand-font-size;
   font-family: 'Goldman', cursive;
   font-weight: bold;
-  font-size: 60px;
   line-height: inherit;
   white-space: nowrap;
 

@@ -558,7 +558,7 @@ export default {
   </div>
   </div>
 </template>
-<!--<script src="https://unpkg.com/vue-tree-navigation@4.0.0/dist/vue-tree-navigation.js"></script>-->
+<script src="https://unpkg.com/vue-tree-navigation@4.0.0/dist/vue-tree-navigation.js"></script>
 <script> 
 import Vue from 'vue'
 import BootstrapSidebar from 'vue-bootstrap-sidebar'
@@ -587,8 +587,8 @@ export default {
               {
                 path: 'cchp',
                 children: [
-                  { name: "CCHP 소개", path: 'cchp_info' },
-                  { name: "CCHP 적용사례", path: 'cchp_ex' },
+                  { name: "CCHP 소개", href : {name:'CCHP_info.vue'} },
+                  { name: "CCHP 적용사례", href: {name: 'CCHP_ex.vue'} },
                   { name: "CCHP 관련뉴스", path: 'cchp_news' }
                 ]
               }

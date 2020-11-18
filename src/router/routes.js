@@ -52,9 +52,10 @@ const routes = [
         ],
       },
      {
-        path: '/electric',
+        path: 'electric',
         name: 'electric',
         component: Elec_pattern,
+        //component: Elec_compare,
         children:[
           {
             path: 'elec_pattern',
@@ -113,7 +114,12 @@ const routes = [
         name: "table-list",
         component: TableList
       },
-     /* {
+      /*{
+        path: 'electric',
+        name: "elec_compare",
+        component: Elec_compare
+      }
+      {
         path: "elec_pattern",
         name: "Electric_pattern",
         component: Elec_pattern
