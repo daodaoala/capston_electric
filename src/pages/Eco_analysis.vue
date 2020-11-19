@@ -1,13 +1,13 @@
 <template>
   <div>
-       <div>
-           <b-form-group label="교육용 요금제" icon="tim-icons icon-bulb-63">  
-           <!-- <b-form-checkbox-group id="checkbox-group-2" v-model="selected" name="flavour-2">
-               <b-form-checkbox value="graph-check">그래프 보기</b-form-checkbox>
+    <div>
+        <b-form-group label="경제성 분석" >  
+            <b-form-checkbox-group id="checkbox-group-2" v-model="selected" name="flavour-2">
+              <b-form-checkbox value="graph-check">그래프 보기</b-form-checkbox>
               <b-form-checkbox value="info-check">수치 정보 보기</b-form-checkbox>
-            </b-form-checkbox-group> -->
-          </b-form-group>
-        </div>
+            </b-form-checkbox-group>
+        </b-form-group>
+    </div>
     
       <b-row align-v="stretch">
         <b-col cols="12" md="10">
@@ -15,117 +15,75 @@
             <b-col cols="6">
               <b-row>
                 <b-col sm="3">시작 일자</b-col>
-                <b-col sm="7"> <b-input-group class="mb-3">
-            <b-form-input
-              id="example-input"
-              v-model="value"
-              type="text"
-              placeholder="YYYY-MM-DD"
-              autocomplete="off"
-            ></b-form-input>
-            <b-input-group-append>
-              <b-form-datepicker
-                v-model="value"
-                button-only
-                right
-                locale="en-US"
-                aria-controls="example-input"
-                @context="onContext"
-              ></b-form-datepicker>
-            </b-input-group-append>
-          </b-input-group>
-      </b-col>
+                  <b-col sm="7"> 
+                    <b-input-group class="mb-3">
+                        <b-form-input
+                            id="example-input"
+                            v-model="value"
+                            type="text"
+                            placeholder="YYYY-MM-DD"
+                            autocomplete="off"
+                        ></b-form-input>
+                    <b-input-group-append>
+                        <b-form-datepicker
+                            v-model="value"
+                            button-only
+                            right
+                            locale="en-US"
+                            aria-controls="example-input"
+                            @context="onContext"
+                        ></b-form-datepicker>
+                    </b-input-group-append>
+                    </b-input-group>
+                  </b-col>
               </b-row>
             </b-col>
+
             <b-col cols="6">
-               <b-row>
-                <b-col sm="3">요금제 조회</b-col>
-                <b-col sm="7"> 
-                <b-form-select v-model="select" :options="options" > </b-form-select> 
-                <!-- <el-select class="select-danger"
-                   placeholder="요금제 선택"
-                   v-model="selects.simple">
-                 <el-option v-for="option in selects.languages"
-                   class="select-danger"
-                   :value="option.value"
-                   :label="option.label"
-                   :key="option.label">
-                 </el-option
-                </el-select
-            <div class="mt-3"> <strong> {{select}} </strong> </div> 
-            <b-input-group class="mb-3">
-            <b-form-input
-              id="example-input"
-              v-model="value"
-              type="text"
-              placeholder="YYYY-MM-DD"
-              autocomplete="off"
-            ></b-form-input>
-            <b-input-group-append>
-              <b-form-datepicker
-                v-model="value"
-                button-only
-                right
-                locale="en-US"
-                aria-controls="example-input"
-                @context="onContext"
-              ></b-form-datepicker>
-            </b-input-group-append>
-          </b-input-group>-->
-     </b-col>
-              </b-row>
+                <b-row>
+                    <b-col sm="3">요금제 조회</b-col>
+                        <b-col sm="7"> 
+                            <b-form-select v-model="select" :options="options"></b-form-select> 
+                        </b-col>
+                </b-row>
             </b-col>
           </b-row>
+
           <b-row>
             <b-col cols="6">
               <b-row>
                 <b-col sm="3">종료 일자</b-col>
-                <b-col sm="7"> <b-input-group class="mb-3">
-            <b-form-input
-              id="example-input"
-              v-model="value"
-              type="text"
-              placeholder="YYYY-MM-DD"
-              autocomplete="off"
-            ></b-form-input>
-            <b-input-group-append>
-              <b-form-datepicker
-                v-model="value"
-                button-only
-                right
-                locale="en-US"
-                aria-controls="example-input"
-                @context="onContext"
-              ></b-form-datepicker>
-            </b-input-group-append>
-          </b-input-group>
-     </b-col>
-              </b-row>
-            </b-col>
-            <b-col cols="6">
-               <b-row>
-                <b-col sm="3">단위 선택</b-col>
-                <b-col sm="7"> <b-form-group>
-                  <b-form-radio-group 
-                    v-model="selected2"
-                    :options="option2"
-                    name="radio-inline"
-                  ></b-form-radio-group>
-                 <!-- <base-radio inline name="radio1" class="mb-3" v-model="radio.radio1">연간</base-radio>
-                  <base-radio inline name="radio2" class="mb-3" v-model="radio.radio1">월간</base-radio>
-                  <base-radio inline name="radio3" class="mb-3" v-model="radio.radio1">일간</base-radio>-->
-                </b-form-group>
-                </b-col>
+                    <b-col sm="7"> 
+                        <b-input-group class="mb-3">
+                            <b-form-input
+                                id="example-input"
+                                v-model="value"
+                                type="text"
+                                placeholder="YYYY-MM-DD"
+                                autocomplete="off"
+                            ></b-form-input>
+                        <b-input-group-append>
+                            <b-form-datepicker
+                                v-model="value"
+                                button-only
+                                right
+                                locale="en-US"
+                                aria-controls="example-input"
+                                @context="onContext"
+                            ></b-form-datepicker>
+                        </b-input-group-append>
+                        </b-input-group>
+                    </b-col>
               </b-row>
             </b-col>
           </b-row>
         </b-col>
+
         <b-col cols="12" md="2">
-            <b-button size="lg" variant="primary" style="height:60%;width:60%" >조회</b-button>
+            <b-button size="lg" variant="primary" style="height:60%;width:60%">조회</b-button>
         </b-col>
-          
-      
-      </b-row>
+    </b-row>
+
     <div class="row">
       <div class="col-12">
         <card type="chart">
@@ -240,15 +198,13 @@
   import UserTable from './Dashboard/UserTable';
   import config from '@/config';
   import { FormSelectPlugin } from 'bootstrap-vue';
- // import {Select, Option} from 'element-ui';
+  
   export default {
     components: {
       LineChart,
       BarChart,
       TaskList,
       UserTable
-      //[Select.name]: Select,
-      //[Option.name]: Option
     },
     data() {
       return {
@@ -264,25 +220,6 @@
           { value: 'g', text: '교육용(을) 고압A 선택II' },
           { value: 'h', text: '교육용(을) 고압B 선택I' },
           { value: 'i', text: '교육용(을) 고압B 선택II' }
-        ],
-       /* selects: {
-            simple: '',
-            languages: [
-              { value: 'a', label: '교육용(갑) 저압전력' },
-              { value: 'b', label: '교육용(갑) 고압A 선택I' },
-              { value: 'c', label: '교육용(갑) 고압A 선택II' },
-              { value: 'd', label: '교육용(갑) 고압B 선택I' },
-              { value: 'e', label: '교육용(갑) 고압B 선택II' },
-              { value: 'f', label: '교육용(을) 고압A 선택I' },
-              { value: 'g', label: '교육용(을) 고압A 선택II' },
-              { value: 'h', label: '교육용(을) 고압B 선택I' },
-              { value: 'i', label: '교육용(을) 고압B 선택II' }]
-        },*/
-        selected2: 'A',
-        option2: [
-          { value: 'A', text: '연간' },
-          { value: 'B', text: '월간' },
-          { value: 'C', text: '일간' }
         ],
         bigLineChart: {
           allData: [

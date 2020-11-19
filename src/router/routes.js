@@ -17,6 +17,13 @@ const Elec_pattern = () => import(/* webpackChunkName: "common" */ "@/pages/Elec
 const Elec_inputdata = () => import(/* webpackChunkName: "common" */ "@/pages/Elec_inputdata.vue");
 const Elec_compare = () => import(/* webpackChunkName: "common" */ "@/pages/Elec_compare.vue");
 const Elec_payment = () => import(/* webpackChunkName: "common" */ "@/pages/Elec_payment.vue");
+const Sch_prediction = () => import(/* webpackChunkName: "common" */ "@/pages/Sch_prediction.vue");
+const Sch_cchp = () => import(/* webpackChunkName: "common" */ "@/pages/Sch_cchp.vue");
+const Sch_inputdata = () => import(/* webpackChunkName: "common" */ "@/pages/Sch_inputdata.vue");
+const Sch_time = () => import(/* webpackChunkName: "common" */ "@/pages/Sch_time.vue");
+const Eco_inputdata = () => import(/* webpackChunkName: "common" */ "@/pages/Eco_inputdata.vue");
+const Eco_compare = () => import(/* webpackChunkName: "common" */ "@/pages/Eco_compare.vue");
+const Eco_analysis = () => import(/* webpackChunkName: "common" */ "@/pages/Eco_analysis.vue");
 
 const routes = [
   {
@@ -30,100 +37,105 @@ const routes = [
         component: Home
       },
       {
-        path: "cchp",
+        path: "CCHP",
         name: 'CCHP',
-        component: CCHP_info,
-        children:[
-          {
-            path: "cchp_info",
-            name: 'CCHP_info',
-            component: CCHP_info,
-          },
-          {
-            path: 'cchp_ex',
-            name: 'CCHP_ex',
-            component: CCHP_ex
-          },
-          {
-            path: 'cchp_news',
-            name: "CCHP_news",
-            component: CCHP_news
-          }
-        ],
+        component: CCHP_info
       },
-     {
+      {
         path: 'electric',
         name: 'electric',
-        component: Elec_pattern,
-        //component: Elec_compare,
-        children:[
-          {
-            path: 'elec_pattern',
-            name: "elec_pattern",
-            component: Elec_pattern
-          },
-          {
-            path: 'elec_inputdata',
-            name: "elec_inputdata",
-            component: Elec_inputdata
-          },
-          {
-            path: 'elec_compare',
-            name: "elec_compare",
-            component: Elec_compare
-          },
-          {
-            path: 'elec_payment',
-            name: "elec_payment",
-            component: Elec_payment
-          }
-        ]
+        component: Elec_pattern
       },
-      /*{
-        path: "/CCHP",
-        name: "CCHP",
-        component: CCHP,
+      {
+        path: 'scheduling',
+        name: 'scheduling',
+        component: Sch_prediction
       },
-      {json
-        path: "/CCHP_ex",
-        name: "CCHP_ex",
+      {
+        path: 'economics',
+        name: 'economics',
+        component: Eco_analysis
+      },
+      {
+        path: '/electric/elec_pattern',
+        name: "/electric/elec_pattern",
+        component: Elec_pattern
+      },
+      {
+        path: '/electric/elec_compare',
+        name: "/electric/elec_compare",
+        component: Elec_compare
+      },
+      {
+        path: '/electric/elec_inputdata',
+        name: "/electric/elec_inputdata",
+        component: Elec_inputdata
+      },
+      {
+        path: '/electric/elec_payment',
+        name: "/electric/elec_payment",
+        component: Elec_payment
+      },
+      {
+        path: "/CCHP/CCHP_info",
+        name: "/CCHP/CCHP_info",
+        component: CCHP_info
+      },
+      {
+        path: "/CCHP/CCHP_ex",
+        name: "/CCHP/CCHP_ex",
         component: CCHP_ex
       },
       {
-        path: "/CCHP_news",
-        name: "CCHP_news",
+        path: "/CCHP/CCHP_news",
+        name: "/CCHP/CCHP_news",
         component: CCHP_news
-      },*/
+      },
+      {
+        path: '/scheduling/sch_prediction',
+        name: '/scheduling/sch_prediction',
+        component: Sch_prediction
+      },
+      {
+        path: '/scheduling/sch_cchp',
+        name: '/scheduling/sch_cchp',
+        component: Sch_cchp
+      },
+      {
+        path: '/scheduling/sch_inputdata',
+        name: '/scheduling/sch_inputdata',
+        component: Sch_inputdata
+      },
+      {
+        path: '/scheduling/sch_time',
+        name: '/scheduling/sch_time',
+        component: Sch_time
+      },
+      {
+        path: '/economics/eco_analysis',
+        name: '/economics/eco_analysis',
+        component: Eco_analysis
+      },
+      {
+        path: '/economics/eco_compare',
+        name: '/economics/eco_compare',
+        component: Eco_compare
+      },
+      {
+        path: '/economics/eco_inputdata',
+        name: '/economics/eco_inputdata',
+        component: Eco_inputdata
+      },
       {
         path: "profile",
         name: "profile",
         component: Profile
       },
       {
-        path: "scheduling",
-        name: "scheduling",
-        component: scheduling
-      },
-      {
-        path: "economics",
-        name: "economics",
-        component: economics
-      },
-      {
         path: "table-list",
         name: "table-list",
         component: TableList
       },
-      /*{
-        path: 'electric',
-        name: "elec_compare",
-        component: Elec_compare
-      }
-      {
-        path: "elec_pattern",
-        name: "Electric_pattern",
-        component: Elec_pattern
-      }*/
     ]
   },
  { path: "*", component: NotFound },

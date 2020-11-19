@@ -43,7 +43,7 @@
                 <b-row>
                     <b-col sm="3">요금제 조회</b-col>
                         <b-col sm="7"> 
-                            <b-form-select v-model="select" :options="options1"></b-form-select> 
+                            <b-form-select v-model="select" :options="options"></b-form-select> 
                         </b-col>
                 </b-row>
             </b-col>
@@ -198,20 +198,18 @@
   import UserTable from './Dashboard/UserTable';
   import config from '@/config';
   import { FormSelectPlugin } from 'bootstrap-vue';
- // import {Select, Option} from 'element-ui';
+  
   export default {
     components: {
       LineChart,
       BarChart,
       TaskList,
       UserTable
-      //[Select.name]: Select,
-      //[Option.name]: Option
     },
     data() {
       return {
         select: null,
-        options1: [
+        options: [
           { value: null, text: '요금제 선택'  },
           { value: 'a', text: '교육용(갑) 저압전력' },
           { value: 'b', text: '교육용(갑) 고압A 선택I' },
@@ -223,30 +221,6 @@
           { value: 'h', text: '교육용(을) 고압B 선택I' },
           { value: 'i', text: '교육용(을) 고압B 선택II' }
         ],
-       /* selects: {
-            simple: '',
-            languages: [
-              { value: 'a', label: '교육용(갑) 저압전력' },
-              { value: 'b', label: '교육용(갑) 고압A 선택I' },
-              { value: 'c', label: '교육용(갑) 고압A 선택II' },
-              { value: 'd', label: '교육용(갑) 고압B 선택I' },
-              { value: 'e', label: '교육용(갑) 고압B 선택II' },
-              { value: 'f', label: '교육용(을) 고압A 선택I' },
-              { value: 'g', label: '교육용(을) 고압A 선택II' },
-              { value: 'h', label: '교육용(을) 고압B 선택I' },
-              { value: 'i', label: '교육용(을) 고압B 선택II' }]
-        },*/
-        selected: 'A',
-        options: [
-          { value: 'A', text: '연간' },
-          { value: 'B', text: '월간' },
-          { value: 'C', text: '일간' }
-        ],
-        /*radio: {
-           radio1: "radio1",
-           radio2: "radio2",
-           radio3: "radio3",
-        },*/
         bigLineChart: {
           allData: [
             [100, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100],

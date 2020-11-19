@@ -585,10 +585,10 @@ export default {
      return {
         menu1: [
               {
-                path: 'cchp',
+                path: '/cchp',
                 children: [
-                  { name: "CCHP 소개", href : {name:'CCHP_info.vue'} },
-                  { name: "CCHP 적용사례", href: {name: 'CCHP_ex.vue'} },
+                  { name: "CCHP 소개", path: 'cchp_info' },
+                  { name: "CCHP 적용사례", path: 'cchp_ex' },
                   { name: "CCHP 관련뉴스", path: 'cchp_news' }
                 ]
               }
@@ -608,10 +608,10 @@ export default {
                {
                 path: "scheduling",
                 children: [
-                  { name: "전력 사용량 예측", path: "scheduling" },
-                  { name: "CCHP 스케줄링", path: "/CCHP_ex" },
-                  { name: "CCHP 운영 시간표", path: "/CCHP_news" },
-                  { name: "입력 변수 데이터 통계", path: "/CCHP_news" }
+                  { name: "전력 사용량 예측", path: "sch_prediction" },
+                  { name: "CCHP 스케줄링", path: "sch_cchp" },
+                  { name: "CCHP 운영 시간표", path: "sch_time" },
+                  { name: "입력 변수 데이터 통계", path: "sch_inputdata" }
                 ]
               },
           ],
@@ -619,9 +619,9 @@ export default {
                 {
                 path: "economics",
                 children: [
-                  { name: "경제성 분석", path: 'electric' },
-                  { name: "다른 요금제와 비교", path: "/CCHP_ex" },
-                  { name: "입력 변수 데이터 통계", path: "/CCHP_news" }
+                  { name: "경제성 분석", path: 'eco_analysis' },
+                  { name: "다른 요금제와 비교", path: "eco_compare" },
+                  { name: "입력 변수 데이터 통계", path: "eco_inputdata" }
                 ]
               },
            ],

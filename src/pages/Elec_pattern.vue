@@ -41,7 +41,7 @@
                <b-row>
                 <b-col sm="3">요금제 조회</b-col>
                 <b-col sm="7"> 
-                <b-form-select v-model="select" :options="options1" > </b-form-select> 
+                <b-form-select v-model="select" :options="options" > </b-form-select> 
                 <!-- <el-select class="select-danger"
                    placeholder="요금제 선택"
                    v-model="selects.simple">
@@ -107,8 +107,8 @@
                 <b-col sm="3">단위 선택</b-col>
                 <b-col sm="7"> <b-form-group>
                   <b-form-radio-group 
-                    v-model="selected"
-                    :options="options"
+                    v-model="selected2"
+                    :options="option2"
                     name="radio-inline"
                   ></b-form-radio-group>
                  <!-- <base-radio inline name="radio1" class="mb-3" v-model="radio.radio1">연간</base-radio>
@@ -253,7 +253,7 @@
     data() {
       return {
         select: null,
-        options1: [
+        options: [
           { value: null, text: '요금제 선택'  },
           { value: 'a', text: '교육용(갑) 저압전력' },
           { value: 'b', text: '교육용(갑) 고압A 선택I' },
@@ -278,17 +278,12 @@
               { value: 'h', label: '교육용(을) 고압B 선택I' },
               { value: 'i', label: '교육용(을) 고압B 선택II' }]
         },*/
-        selected: 'A',
-        options: [
+        selected2: 'A',
+        option2: [
           { value: 'A', text: '연간' },
           { value: 'B', text: '월간' },
           { value: 'C', text: '일간' }
         ],
-        /*radio: {
-           radio1: "radio1",
-           radio2: "radio2",
-           radio3: "radio3",
-        },*/
         bigLineChart: {
           allData: [
             [100, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100],
