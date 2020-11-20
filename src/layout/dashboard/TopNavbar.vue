@@ -153,9 +153,5 @@
   };
 </script>
 <style scoped>
-
-.navbar_brand{
-  font-size: 60px;
-}
  @import url('https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap');
 </style>

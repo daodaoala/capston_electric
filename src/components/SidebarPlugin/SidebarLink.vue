@@ -4,10 +4,10 @@
              class="nav-item"
              v-bind="$attrs"
              tag="li">
-    <a class="nav-link">
-      <slot>
+    <br><a class="nav-link">
+      <slot><br>
         <i v-if="icon" :class="icon"></i>
-        <p style="font-size: 12px; font-family: 'Courier, monospace';">{{name}}</p>
+        <p style="font-size: 15px; font-family: 'Courier, monospace';">{{name}}</p>
       </slot>
     </a>
   </component>

@@ -161,7 +161,7 @@
 // https://primer.github.io/.
 //
 
-.custom-select {
+.custom-select {  //요금제 선택 박스칸 css
   display: inline-block;
   width: 100%;
   color: rgb(139, 138, 138); //요금제 선택 글씨색
@@ -183,7 +183,7 @@
   appearance: none;
 
   &:focus {
-    border-color: rgb(183, 100, 238); // $custom-select-focus-border-color;
+    border-color: rgb(183, 100, 238); // $custom-select-focus-border-color; //요금제 선택 박스 포커싱했을때
     outline: 0;
     @if $enable-shadows {
       box-shadow: $custom-select-box-shadow, $custom-select-focus-box-shadow;

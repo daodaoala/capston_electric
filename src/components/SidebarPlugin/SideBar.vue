@@ -15,7 +15,8 @@
                :class="{'logo-img-rtl': $rtl.isRTL}">
             <img
               src="@/assets/eg.png"
-              alt="">
+              alt=""
+              width="100%">
           </div>
         </a>
         <a href="/" class="simple-text logo-normal">
@@ -39,6 +40,15 @@
     </div>
   </div>
 </template>
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+  .simple-text{
+    font-size: 19px;
+    font-weight: bold;
+    font-family: 'Bree Serif', serif;
+  }
+  
+</style>
 <script>
   import SidebarLink from "./SidebarLink";
 

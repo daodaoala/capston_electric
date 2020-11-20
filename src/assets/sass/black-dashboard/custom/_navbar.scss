@@ -99,18 +99,18 @@
     background-color: $danger !important;
   }
 
-  .navbar-brand {
+  .navbar-brand {    //메인화면 로고&이미지 css
     position: fixed;
     left: -5px;
-    padding-top: .3125rem;
+    padding-top: .3130rem;
     padding-bottom: .3125rem;
     color: $white;
     //@error: 23px;
     //margin-right: 20px;;
-    margin-left: 20px;
-    margin-top: 10px;
+    margin-left: 15px;
+    margin-top: 7px;
     text-transform: uppercase;
-    font-size: $font-paragraph;
+    font-size: 18px;//$font-paragraph;
   }
 
   .navbar-toggle button:focus, .navbar-toggler{

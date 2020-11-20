@@ -3,7 +3,7 @@
     <b-carousel
       id="carousel-1"
       v-model="slide"
-      :interval="4000"
+      :interval="3000"
       indicators
       background="#ababab"
       img-width="1024"
@@ -13,24 +13,24 @@
       @sliding-end="onSlideEnd"
     >
       <!-- Text slides with image -->
-      <b-carousel-slide
-    
-        img-src="https://cdn.pixabay.com/photo/2019/04/30/12/34/smart-4168483_960_720.jpg"
-      ><h1>지속가능 사회를 위한 대학 운영, 온실가스 감축을 위한 친환경 교정 구축</h1></b-carousel-slide>
+      <b-carousel-slide img-src="https://cdn.pixabay.com/photo/2019/04/30/12/34/smart-4168483_960_720.jpg" height="480">
+        <h1 class=text1>지속가능 사회를 위한 대학 운영, 온실가스 감축을 위한 친환경 교정 구축</h1>
+      </b-carousel-slide>
 
       <!-- Slides with custom text -->
-      <b-carousel-slide img-src="https://cdn.pixabay.com/photo/2018/05/11/09/07/technology-3389917_960_720.jpg">
-        <h1>미래의 친환경 인재 양성을 위한 친환경 교육 및 연구 실시</h1>
+      <b-carousel-slide img-src="https://www.hdwallpapers.in/thumbs/2020/abstract_electric_4k_hd_abstract-t2.jpg">
+        <h1 class=text2>미래의 친환경 인재 양성을 위한 친환경 교육 및 연구 실시</h1>
       </b-carousel-slide>
 
       <!-- Slides with image only -->
       <b-carousel-slide img-src="https://cdn.pixabay.com/photo/2016/03/29/16/49/electricity-1288717_960_720.jpg">
-      <h1>대학 및 지역사회에 친환경 문화 전파를 위한 참여 확산</h1></b-carousel-slide>
+        <h1 class=text2>대학 및 지역사회에 친환경 문화 전파를 위한 참여 확산</h1>
+      </b-carousel-slide>
 
       <!-- Slides with img slot -->
-      <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
+      <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment
 
-      <!--<b-carousel-slide>
+      <b-carousel-slide>
         <template #img>
           <img
             class="d-block img-fluid w-100"
@@ -124,9 +124,14 @@ a {
   font-family: 'Do Hyeon', sans-serif;
   font-size: 18px;
 }
+.text2{
+  margin-bottom: 90px;
+}
+.text1{
+  margin-bottom: 200px;
+}
 h1{
   text-align: center;
-  top: 1000px;
   padding: 0 0 250px 0;  
   font-family: 'BMDOHYEON';
   font-size: 30px;
@@ -135,7 +140,6 @@ h1{
   margin: 30px 0 30px 0;
   padding: 10px;
 }
-
 .card-title {
 font-family: 'Jua', sans-serif;
 }
