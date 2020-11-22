@@ -24,7 +24,7 @@
 
       <!-- Slides with image only -->
       <b-carousel-slide img-src="https://cdn.pixabay.com/photo/2016/03/29/16/49/electricity-1288717_960_720.jpg">
-        <h1 class=text2>대학 및 지역사회에 친환경 문화 전파를 위한 참여 확산</h1>
+        <h1 class=text3>대학 및 지역사회에 친환경 문화 전파를 위한 참여 확산</h1>
       </b-carousel-slide>
 
       <!-- Slides with img slot -->
@@ -124,17 +124,20 @@ a {
   font-family: 'Do Hyeon', sans-serif;
   font-size: 18px;
 }
+.text3{
+  margin-bottom: 15px;
+}
 .text2{
-  margin-bottom: 90px;
+  margin-bottom: 50px;
 }
 .text1{
-  margin-bottom: 200px;
+  margin-bottom: 115px;
 }
 h1{
   text-align: center;
   padding: 0 0 250px 0;  
   font-family: 'BMDOHYEON';
-  font-size: 30px;
+  font-size: 23px;
 }
 .Cards{
   margin: 30px 0 30px 0;

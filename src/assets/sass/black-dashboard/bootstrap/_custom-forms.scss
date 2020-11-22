@@ -41,7 +41,7 @@
     @include box-shadow($custom-control-indicator-active-box-shadow);
   }
 
-  &:disabled {
+  &:disabled {  
     ~ .custom-control-label {
       color: $custom-control-label-disabled-color;
 
@@ -61,7 +61,7 @@
   margin-bottom: 0;
 
   // Background-color and (when enabled) gradient
-  &::before {
+  &::before {   //그래프, 수치정보보기 버튼
     position: absolute;
     top: (($font-size-base * $line-height-base - $custom-control-indicator-size) / 2);
     left: -$custom-control-gutter;
@@ -73,6 +73,12 @@
     user-select: none;
     background-color: $custom-control-indicator-bg;
     @include box-shadow($custom-control-indicator-box-shadow);
+    border: 2px;
+    border-top-style: dotted;
+    border-bottom-style: dotted;
+    border-left-style: dotted;
+    border-right-style: dotted;
+    border-color: rgb(241, 232, 232);//rgb(94,114,228);rgb(241, 232, 232);
   }
 
   // Foreground (icon)

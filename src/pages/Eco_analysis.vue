@@ -127,7 +127,8 @@
     </div>
     <div class="row">
       <div class="col-lg-4" :class="{'text-right': isRTL}">
-        <card type="chart">
+       
+        <card type="chart"> <!-- 763215 그래프 -->
           <template slot="header">
             <h5 class="card-category">{{$t('dashboard.totalShipments')}}</h5>
             <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary "></i> 763,215</h3>
@@ -143,8 +144,10 @@
           </div>
         </card>
       </div>
-      <div class="col-lg-4" :class="{'text-right': isRTL}">
-        <card type="chart">
+
+      <div class="col-lg-4" :class="{'text-right': isRTL}"> 
+
+        <card type="chart">   <!-- 763215 그래프 -->
           <template slot="header">
             <h5 class="card-category">{{$t('dashboard.dailySales')}}</h5>
             <h3 class="card-title"><i class="tim-icons icon-delivery-fast text-info "></i> 3,500€</h3>
@@ -158,7 +161,7 @@
             </bar-chart>
           </div>
         </card>
-        
+        <!--
         <card type="tasks" :header-classes="{'text-right': isRTL}">
           <template slot="header">
             <h6 class="title d-inline">{{$t('dashboard.tasks', {count: 5})}}</h6>
@@ -177,15 +180,14 @@
           <div class="table-full-width table-responsive">
             <task-list></task-list>
           </div>
-        </card>
+        </card> -->
       </div>
+      
       <div class="col-lg-6 col-md-12">
-        <card class="card" :header-classes="{'text-right': isRTL}">
-          <h4 slot="header" class="card-title">{{$t('dashboard.simpleTable')}}</h4>
-          <div class="table-responsive">
-            <user-table></user-table>
-          </div>
-        </card>
+        <b-button v-b-modal.modal-lg class="modalbutton" type="warning" variant="primary">온실가스 배출량 환산</b-button>
+          <b-modal id="modal-lg" size="lg" centered title="온실가스 배출량 환산">
+            <p class="my-4">경제적 이득으로 지구의 온실가스 30%를 줄이셨습니다!</p>
+          </b-modal>
       </div>
     </div>
   </div>
@@ -357,5 +359,13 @@
   };
 </script>
 <style>
-
+  .modalbutton{
+       margin-left: 550px;
+       margin-top: 19px;   
+       font-size:14px;
+       font-weight:700;
+  }
+  #modal-center{
+     padding-bottom: 30px;  
+  }
 </style>

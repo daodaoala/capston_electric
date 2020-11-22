@@ -4,7 +4,7 @@
              class="nav-item"
              v-bind="$attrs"
              tag="li">
-    <br><a class="nav-link">
+      <a class="nav-link">
       <slot><br>
         <i v-if="icon" :class="icon"></i>
         <p style="font-size: 15px; font-family: 'Courier, monospace';">{{name}}</p>

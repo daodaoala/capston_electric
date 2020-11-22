@@ -29,7 +29,8 @@ Vue.use(VueRouter);
 Vue.use(VueSidebarMenu)
 Vue.use(RouterPrefetch);
 Vue.use(VueTreeNavigation);
-/* eslint-disable no-new */
+///Vue.use(FormDatepickerPlugin)
+
 new Vue({
   router,
   i18n,

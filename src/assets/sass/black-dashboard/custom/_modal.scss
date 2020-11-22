@@ -19,17 +19,20 @@
         margin: -1rem -1rem -1rem auto;
     }
     .title{
-        color: $black;
+        color: rgb(91, 117, 231);
         margin-top: 5px;
         margin-bottom: 0;
     }
 
-    .modal-title{
-      color: $black;
+    .modal-title{   //모달 타이틀 css
+      color: rgb(91, 117, 231);
+      font-weight: bold;
+      font-size: 18px;;
     }
 
     i.tim-icons {
       font-size: 16px;
+
     }
   }
 
@@ -40,7 +43,9 @@
     line-height: 1.9;
 
     p{
-      color: $black;
+      color:rgb(32, 28, 31);
+      font-size: 15px;
+      font-weight: bold;
     }
   }
   // Footer (for actions)
@@ -132,7 +137,7 @@
 .modal-search{
   .modal-dialog{
     margin: 20px auto;
-    max-width: 650px;
+    max-width: 750px;
     input{
       border: none;
       font-size: 17px;

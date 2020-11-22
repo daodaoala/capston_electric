@@ -57,6 +57,7 @@
     // btn-neutral style
     @if $btn-color == $white{
         color: $primary;
+        //color: $primary1;
 
         &.btn-danger{
             color: $danger;

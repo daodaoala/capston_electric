@@ -39,6 +39,13 @@
               </b-row>
             </b-col>
           </b-row>
+          <b-row>
+            <b-col cols="6">
+              <br>
+              <br>
+              
+            </b-col>
+          </b-row>
         </b-col>
 
         <b-col cols="12" md="2">
@@ -120,34 +127,13 @@
             </bar-chart>
           </div>
         </card>
-        
-        <card type="tasks" :header-classes="{'text-right': isRTL}">
-          <template slot="header">
-            <h6 class="title d-inline">{{$t('dashboard.tasks', {count: 5})}}</h6>
-            <p class="card-category d-inline">{{$t('dashboard.today')}}</p>
-            <base-dropdown menu-on-right=""
-                           tag="div"
-                           title-classes="btn btn-link btn-icon"
-                           aria-label="Settings menu"
-                           :class="{'float-left': isRTL}">
-              <i slot="title" class="tim-icons icon-settings-gear-63"></i>
-              <a class="dropdown-item" href="/">{{$t('dashboard.dropdown.action')}}</a>
-              <a class="dropdown-item" href="/">{{$t('dashboard.dropdown.anotherAction')}}</a>
-              <a class="dropdown-item" href="/">{{$t('dashboard.dropdown.somethingElse')}}</a>
-            </base-dropdown>
-          </template>
-          <div class="table-full-width table-responsive">
-            <task-list></task-list>
-          </div>
-        </card>
       </div>
+
       <div class="col-lg-6 col-md-12">
-        <card class="card" :header-classes="{'text-right': isRTL}">
-          <h4 slot="header" class="card-title">{{$t('dashboard.simpleTable')}}</h4>
-          <div class="table-responsive">
-            <user-table></user-table>
-          </div>
-        </card>
+        <b-button v-b-modal.modal-lg class="modalbutton" type="warning" variant="primary">전력 사용량 통계 정보</b-button>
+          <b-modal id="modal-lg" size="lg" centered title="예측 전력 사용량 통계 정보">
+            <p class="my-4">예측 전력 사용량 통계 정보</p>
+          </b-modal>
       </div>
     </div>
   </div>
@@ -160,7 +146,7 @@
   import UserTable from './Dashboard/UserTable';
   import config from '@/config';
   import { FormSelectPlugin } from 'bootstrap-vue';
-  
+ 
   export default {
     components: {
       LineChart,
@@ -287,6 +273,10 @@
         this.$refs.bigChart.updateGradients(chartData);
         this.bigLineChart.chartData = chartData;
         this.bigLineChart.activeIndex = index;
+      },
+      onContext(ctx) {
+        this.formatted = ctx.selectedFormatted
+        this.selected = ctx.selectedYMD
       }
     },
     mounted() {
