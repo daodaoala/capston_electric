@@ -19,7 +19,7 @@
     },
     data() {
       return {
-        model: {
+       /* model: {
           company: 'Creative Code Inc.',
           email: 'mike@email.com',
           username: 'michael23',
@@ -29,7 +29,7 @@
           city: 'Melbourne',
           country: 'Australia',
           about: 'Lamborghini Mercy, Your chick she so thirsty, I\'m in that two seat Lambo.'
-        },
+        },*/
         user: {
           fullName: 'Mike Andrew',
           title: 'Ceo/Co-Founder',

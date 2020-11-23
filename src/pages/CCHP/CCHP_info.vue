@@ -42,8 +42,8 @@ h3{
 }
 h4{
   margin-left: 30px;
-  font-family: 'Noto Sans KR', sans-serif;
-  /* font-family: 'Jua', sans-serif; */
+  /* font-family: 'Noto Sans KR', sans-serif; */
+  font-family: 'Jua', sans-serif; 
   font-size: 20px;
   letter-spacing: 1px;
 }

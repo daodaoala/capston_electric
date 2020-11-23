@@ -1,81 +1,73 @@
 <template>
   <card>
-    <h5 slot="header" class="title">Edit Profile</h5>
-    <div class="row">
-      <div class="col-md-5 pr-md-1">
-        <base-input label="Company (disabled)"
-                  placeholder="Company"
-                  v-model="model.company"
-                  disabled>
+    <h3 slot="header" class="title">회원가입</h3>
+     <div class="row"> 
+      <div class="col-md-3 px-md-1">
+        <base-input label="ID"
+                  v-model="model.id"
+                  placeholder="ID">
         </base-input>
       </div>
       <div class="col-md-3 px-md-1">
-        <base-input label="Username"
+        <base-input label="Password"
+                  v-model="model.password"
+                  placeholder="Password">
+        </base-input>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 px-md-1">
+        <base-input label="관리자 이름"
                   placeholder="Username"
                   v-model="model.username">
         </base-input>
       </div>
       <div class="col-md-4 pl-md-1">
-        <base-input label="Email address"
+        <base-input label="이메일"
                   type="email"
-                  placeholder="mike@email.com">
+                  placeholder="name@email.com">
         </base-input>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6 pr-md-1">
-        <base-input label="First Name"
-                  v-model="model.firstName"
-                  placeholder="First Name">
+      <div class="col-md-5 pr-md-1">
+        <base-input label="학교"
+                  placeholder="School Name"
+                  v-model="model.company">
         </base-input>
       </div>
-      <div class="col-md-6 pl-md-1">
-        <base-input label="Last Name"
-                  v-model="model.lastName"
-                  placeholder="Last Name">
-        </base-input>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <base-input label="Address"
-                  v-model="model.address"
-                  placeholder="Home Address">
-        </base-input>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4 pr-md-1">
-        <base-input label="City"
-                  v-model="model.city"
-                  placeholder="City">
-        </base-input>
-      </div>
-      <div class="col-md-4 px-md-1">
-        <base-input label="Country"
-                  v-model="model.country"
-                  placeholder="Country">
-        </base-input>
-      </div>
-      <div class="col-md-4 pl-md-1">
-        <base-input label="Postal Code"
-                  placeholder="ZIP Code">
-        </base-input>
-      </div>
-    </div>
-    <div class="row">
       <div class="col-md-8">
-        <base-input>
-          <label>About Me</label>
-          <textarea rows="4" cols="80"
-                    class="form-control"
-                    placeholder="Here can be your description"
-                    v-model="model.about">
-
-              </textarea>
+        <base-input label="주소"
+                  v-model="model.address"
+                  placeholder="School Address">
         </base-input>
+        <base-button >주소 검색</base-button>
       </div>
     </div>
+
+      <div class="col-md-3 px-md-1">
+        <base-input label="데이터 업로드"
+                  v-model="model.password"
+                  placeholder="Data Upload">
+        </base-input>
+        <base-button >파일 찾기</base-button>
+      </div>
+
+    <div class="row"> 
+     <div class="col-md-3 px-md-1">
+        <base-input label="ISmart ID"
+                  v-model="model.id"
+                  placeholder="ISmart ID">
+        </base-input>
+      </div>
+      <div class="col-md-3 px-md-1">
+        <base-input label="ISmart Password"
+                  v-model="model.password"
+                  placeholder="ISmart Password">
+        </base-input>
+      </div>
+    </div> 
+  
     <base-button slot="footer" type="primary" fill>Save</base-button>
   </card>
 </template>
@@ -92,4 +84,13 @@
   }
 </script>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+h3{
+  font-family: 'Jua', sans-serif;
+  letter-spacing: 2.5px;
+}
+label{
+  font-size: 30px;;
+}
 </style>

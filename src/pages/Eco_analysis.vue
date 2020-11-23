@@ -186,6 +186,7 @@
       <div class="col-lg-6 col-md-12">
         <b-button v-b-modal.modal-lg class="modalbutton" type="warning" variant="primary">온실가스 배출량 환산</b-button>
           <b-modal id="modal-lg" size="lg" centered title="온실가스 배출량 환산">
+            <i class="tim-icons icon-world text-primary" style="font-size: 90px" ></i>
             <p class="my-4">경제적 이득으로 지구의 온실가스 30%를 줄이셨습니다!</p>
           </b-modal>
       </div>
@@ -360,12 +361,15 @@
 </script>
 <style>
   .modalbutton{
-       margin-left: 550px;
-       margin-top: 19px;   
-       font-size:14px;
-       font-weight:700;
+    margin-left: 550px;
+    margin-top: 19px;   
+    font-size:14px;
+    font-weight:700;
   }
   #modal-center{
-     padding-bottom: 30px;  
+    padding-bottom: 30px;  
   }
+  /* .tim-icons {
+    font-size: 90px;
+  } */
 </style>
