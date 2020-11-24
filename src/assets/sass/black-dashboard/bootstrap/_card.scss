@@ -36,6 +36,7 @@
   // as much space as possible, ensuring footers are aligned to the bottom.
   flex: 1 1 auto;
   padding: $card-spacer-x;
+  font-family: 'BMDOHYEON';
 }
 
 .card-title {
@@ -49,6 +50,7 @@
 
 .card-text:last-child {
   margin-bottom: 0;
+  font-family: 'BMDOHYEON';
 }
 
 .card-link {
