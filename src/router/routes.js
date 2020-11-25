@@ -25,6 +25,7 @@ const Eco_inputdata = () => import(/* webpackChunkName: "common" */ "@/pages/Eco
 const Eco_compare = () => import(/* webpackChunkName: "common" */ "@/pages/Eco_compare.vue");
 const Eco_analysis = () => import(/* webpackChunkName: "common" */ "@/pages/Eco_analysis.vue");
 
+
 const routes = [
   {
     path: "/",

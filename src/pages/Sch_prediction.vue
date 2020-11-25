@@ -8,8 +8,7 @@
             </b-form-checkbox-group>
         </b-form-group>
     </div>
-    
-      <b-row align-v="stretch">
+    <b-row align-v="stretch">
         <b-col cols="12" md="10">
           <b-row>
             <b-col cols="6">
@@ -19,31 +18,34 @@
                     <b-input-group class="mb-3">
                         <b-form-input
                             id="example-input"
-                            v-model="value"
+                            v-model="date"
                             type="text"
                             placeholder="YYYY-MM-DD"
                             autocomplete="off"
                         ></b-form-input>
                     <b-input-group-append>
-                        <b-form-datepicker
+                     <!--  <date-pick v-model="date"></date-pick>
+                         <b-form-datepicker
                             v-model="value"
                             button-only
                             right
                             locale="en-US"
                             aria-controls="example-input"
                             @context="onContext"
-                        ></b-form-datepicker>
+                        ></b-form-datepicker> -->
                     </b-input-group-append>
                     </b-input-group>
-                  </b-col>
+                     <!-- <base-input label="Date picker">
+                    <flat-picker slot-scope="{focus, blur}"
+                                @on-open="focus"
+                                @on-close="blur"
+                                :config="{allowInput: true}"
+                                class="form-control datepicker"
+                                v-model="dates.simple">
+                    </flat-picker>
+                  </base-input> -->
+                  </b-col> 
               </b-row>
-            </b-col>
-          </b-row>
-          <b-row>
-            <b-col cols="6">
-              <br>
-              <br>
-              
             </b-col>
           </b-row>
         </b-col>
@@ -52,6 +54,7 @@
             <b-button size="lg" variant="primary" style="height:60%;width:60%">조회</b-button>
         </b-col>
     </b-row>
+            
 
     <div class="row">
       <div class="col-12">
@@ -138,7 +141,10 @@
     </div>
   </div>
 </template>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script>
+
   import LineChart from '@/components/Charts/LineChart';
   import BarChart from '@/components/Charts/BarChart';
   import * as chartConfigs from '@/components/Charts/config';
@@ -146,14 +152,21 @@
   import UserTable from './Dashboard/UserTable';
   import config from '@/config';
   import { FormSelectPlugin } from 'bootstrap-vue';
+  import {DatePicker} from 'element-ui'
+  import DatePick from 'vue-date-pick';
+  import 'vue-date-pick/dist/vueDatePick.css';
  
   export default {
     components: {
       LineChart,
       BarChart,
       TaskList,
-      UserTable
+      UserTable,
+      DatePick
     },
+    data: () => ({
+        date: 'YYYY-MM-DD'
+    }),
     data() {
       return {
         bigLineChart: {

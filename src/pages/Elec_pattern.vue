@@ -15,113 +15,114 @@
             <b-col cols="6">
               <b-row>
                 <b-col sm="3">시작 일자</b-col>
-                <b-col sm="7"> <b-input-group class="mb-3">
-            <b-form-input
-              id="example-input"
-              v-model="value"
-              type="text"
-              placeholder="YYYY-MM-DD"
-              autocomplete="off"
-            ></b-form-input>
-            <b-input-group-append>
-              <b-form-datepicker
-                v-model="value"
-                button-only
-                right
-                locale="en-US"
-                aria-controls="example-input"
-                @context="onContext"
-              ></b-form-datepicker>
-            </b-input-group-append>
-          </b-input-group>
-      </b-col>
+                  <b-col sm="7"> 
+                    <b-input-group class="mb-3">
+                    <b-form-input
+                      id="example-input"
+                      v-model="value"
+                      type="text"
+                      placeholder="YYYY-MM-DD"
+                      autocomplete="off"
+                    ></b-form-input>
+                    <b-input-group-append>
+                    <b-form-datepicker
+                      v-model="value"
+                      button-only
+                      right
+                      locale="en-US"
+                      aria-controls="example-input"
+                      @context="onContext"
+                    ></b-form-datepicker>
+                    </b-input-group-append>
+                    </b-input-group>
+                  </b-col>
               </b-row>
             </b-col>
+
             <b-col cols="6">
-               <b-row>
+              <b-row>
                 <b-col sm="3">요금제 조회</b-col>
-                <b-col sm="7"> 
-                <b-form-select v-model="select" :options="options" > </b-form-select> 
-                <!-- <el-select class="select-danger"
-                   placeholder="요금제 선택"
-                   v-model="selects.simple">
-                 <el-option v-for="option in selects.languages"
-                   class="select-danger"
-                   :value="option.value"
-                   :label="option.label"
-                   :key="option.label">
-                 </el-option
-                </el-select
-            <div class="mt-3"> <strong> {{select}} </strong> </div> 
-            <b-input-group class="mb-3">
-            <b-form-input
-              id="example-input"
-              v-model="value"
-              type="text"
-              placeholder="YYYY-MM-DD"
-              autocomplete="off"
-            ></b-form-input>
-            <b-input-group-append>
-              <b-form-datepicker
-                v-model="value"
-                button-only
-                right
-                locale="en-US"
-                aria-controls="example-input"
-                @context="onContext"
-              ></b-form-datepicker>
-            </b-input-group-append>
-          </b-input-group>-->
-     </b-col>
+                  <b-col sm="6"> 
+                    <b-form-select v-model="select" :options="options"> </b-form-select> 
+                  </b-col>
               </b-row>
             </b-col>
           </b-row>
+
           <b-row>
             <b-col cols="6">
               <b-row>
                 <b-col sm="3">종료 일자</b-col>
-                <b-col sm="7"> <b-input-group class="mb-3">
-            <b-form-input
-              id="example-input"
-              v-model="value"
-              type="text"
-              placeholder="YYYY-MM-DD"
-              autocomplete="off"
-            ></b-form-input>
-            <b-input-group-append>
-              <b-form-datepicker
-                v-model="value"
-                button-only
-                right
-                locale="en-US"
-                aria-controls="example-input"
-                @context="onContext"
-              ></b-form-datepicker>
-            </b-input-group-append>
-          </b-input-group>
-     </b-col>
+                  <b-col sm="7"> 
+                    <b-input-group class="mb-3">
+                      <b-form-input
+                        id="example-input"
+                        v-model="value"
+                        type="text"
+                        placeholder="YYYY-MM-DD"
+                        autocomplete="off"
+                      ></b-form-input>
+                    <b-input-group-append>
+                    <b-form-datepicker
+                        v-model="value"
+                        button-only
+                        right
+                        locale="en-US"
+                        aria-controls="example-input"
+                        @context="onContext"
+                    ></b-form-datepicker>
+                    </b-input-group-append>
+                    </b-input-group>
+                  </b-col>
               </b-row>
             </b-col>
-            <b-col cols="6">
-               <b-row>
-                <b-col sm="3">단위 선택</b-col>
-                <b-col sm="7"> <b-form-group>
-                  <b-form-radio-group 
-                    v-model="selected2"
-                    :options="option2"
-                    name="radio-inline"
-                  ></b-form-radio-group>
-                 <!-- <base-radio inline name="radio1" class="mb-3" v-model="radio.radio1">연간</base-radio>
-                  <base-radio inline name="radio2" class="mb-3" v-model="radio.radio1">월간</base-radio>
-                  <base-radio inline name="radio3" class="mb-3" v-model="radio.radio1">일간</base-radio>-->
-                </b-form-group>
-                </b-col>
+
+             <b-col cols="6">
+              <b-row>
+                <b-col sm="3">계약 전력</b-col>
+                    <b-col sm="6"> 
+                          <b-input-group class="mb-3" >
+                            <b-form-input 
+                                id="electric-input"
+                                v-model="input"
+                                type="text"
+                                placeholder="계약 전력"
+                                autocomplete="off"
+                            ></b-form-input>
+                          </b-input-group>
+                    </b-col>
               </b-row>
             </b-col>
           </b-row>
+
+           <b-row>
+            <b-col cols="6">
+              <b-row>
+                <b-col sm="3"></b-col>
+                  <b-col sm="8"> </b-col>
+              </b-row>
+            </b-col>
+
+
+            <b-col cols="6">
+              <b-row>
+                <b-col sm="3">단위 선택</b-col>
+                  <b-col sm="7"> 
+                    <b-form-group>
+                      <b-form-radio-group 
+                        v-model="selected2"
+                        :options="option2"
+                        name="radio-inline"
+                      ></b-form-radio-group>
+                    </b-form-group>
+                  </b-col>
+              </b-row>
+            </b-col>
+          </b-row>
+
         </b-col>
         <b-col cols="12" md="2">
-            <b-button size="lg" variant="primary" style="height:60%;width:60%" >조회</b-button>
+            <b-button size="lg" variant="primary" style="height:48%;width:60%" >조회</b-button>
         </b-col>
           
       
@@ -364,7 +365,8 @@
           },
           gradientColors: config.colors.primaryGradient,
           gradientStops: [1, 0.4, 0],
-        }
+        },
+        input:''
       }
     },
     computed: {

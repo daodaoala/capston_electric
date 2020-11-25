@@ -42,7 +42,7 @@
             <b-col cols="6">
                 <b-row>
                     <b-col sm="3">요금제 조회</b-col>
-                        <b-col sm="7"> 
+                        <b-col sm="6"> 
                             <b-form-select v-model="select" :options="options"></b-form-select> 
                         </b-col>
                 </b-row>
@@ -58,7 +58,7 @@
                             <b-form-input
                                 id="example-input"
                                 v-model="value"
-                                type="text"
+                                type="text1"
                                 placeholder="YYYY-MM-DD"
                                 autocomplete="off"
                             ></b-form-input>
@@ -78,24 +78,43 @@
             </b-col>
 
             <b-col cols="6">
-               <b-row>
-                <b-col sm="3">비교 요금제 선택</b-col>
-                <b-col sm="7"> <b-form-group>
-                  <b-form-radio-group 
-                    v-model="selected2"
-                    :options="option2"
-                    name="radio-inline"
-                  ></b-form-radio-group>
-                </b-form-group>
-                </b-col>
+              <b-row>
+                <b-col sm="3">계약 전력</b-col>
+                    <b-col sm="6"> 
+                          <b-input-group class="mb-3">
+                            <b-form-input
+                                id="electric-input"
+                                v-model="input"
+                                type="text"
+                                placeholder="계약 전력"
+                                autocomplete="off"
+                            ></b-form-input>
+                          </b-input-group>
+                    </b-col>
               </b-row>
             </b-col>
-
           </b-row>
-        </b-col>
+          
+          <b-row>
+            <b-col cols="8">
+              <b-row>
+                <b-col sm="2">비교 요금제 선택</b-col>
+                  <b-col sm="20"> <b-form-group>
+                    <b-form-radio-group 
+                        id="payment_compare"
+                        v-model="selected2"
+                        :options="option2"
+                        name="radio-inline"
+                    ></b-form-radio-group>
+                    </b-form-group>
+                  </b-col>
+               </b-row>
+             </b-col>   
+          </b-row>
+        </b-col> 
 
         <b-col cols="12" md="2">
-            <b-button size="lg" variant="primary" style="height:60%;width:60%">조회</b-button>
+            <b-button size="lg" variant="primary" style="height:50%;width:60%">조회</b-button>
         </b-col>
     </b-row>
 
@@ -323,7 +342,8 @@
           },
           gradientColors: config.colors.primaryGradient,
           gradientStops: [1, 0.4, 0],
-        }
+        },
+        input:''
       }
     },
     computed: {
@@ -379,5 +399,8 @@
   };
 </script>
 <style>
-
+#payment_compare{
+  margin-left: 30px;
+  margin-top: 10px;
+}
 </style>

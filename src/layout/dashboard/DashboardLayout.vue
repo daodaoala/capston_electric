@@ -11,7 +11,7 @@
          <sidebar-link to="/economics"  :name="$t('ECONOMICS')" icon="tim-icons icon-coins"/>
          <span><vue-tree-navigation :items="menu4" /></span>
          <sidebar-link to="/profile" :name="$t('sidebar.userProfile')" icon="tim-icons icon-single-02"/>
-         <!--<sidebar-link to="/table-list" :name="$t('sidebar.tableList')" icon="tim-icons icon-puzzle-10"/>-->
+         <sidebar-link to="/table-list" :name="$t('sidebar.tableList')" icon="tim-icons icon-puzzle-10"/>
        </template>
     </side-bar>
     

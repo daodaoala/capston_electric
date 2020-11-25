@@ -42,7 +42,7 @@
             <b-col cols="6">
                 <b-row>
                     <b-col sm="3">요금제 조회</b-col>
-                        <b-col sm="7"> 
+                        <b-col sm="6"> 
                             <b-form-select v-model="select" :options="options"></b-form-select> 
                         </b-col>
                 </b-row>
@@ -72,6 +72,23 @@
                                 @context="onContext"
                             ></b-form-datepicker>
                         </b-input-group-append>
+                        </b-input-group>
+                    </b-col>
+              </b-row>
+            </b-col>
+          
+            <b-col cols="6">
+              <b-row>
+                <b-col sm="3">계약 전력</b-col>
+                    <b-col sm="6"> 
+                        <b-input-group class="mb-3">
+                            <b-form-input
+                                id="electric-input"
+                                v-model="input"
+                                type="text"
+                                placeholder="계약 전력"
+                                autocomplete="off"
+                            ></b-form-input>
                         </b-input-group>
                     </b-col>
               </b-row>
@@ -304,7 +321,8 @@
           },
           gradientColors: config.colors.primaryGradient,
           gradientStops: [1, 0.4, 0],
-        }
+        },
+        input:''
       }
     },
     computed: {
