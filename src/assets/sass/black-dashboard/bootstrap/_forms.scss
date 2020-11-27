@@ -88,10 +88,10 @@ select.form-control {
   padding-bottom: calc(#{$input-padding-y} + #{$input-border-width});
   //margin-top: 50px;
   margin-bottom: 0; // Override the `<label>/<legend>` default
-  margin-left: 20px;
+  margin-left: 16px;
   //font-family: 'Goldman', cursive;
   font-weight: bold;
-  font-size: 17px;//inherit; // Override the `<legend>` default
+  font-size: 20px;//inherit; // Override the `<legend>` default
   line-height: $line-height-sm;
 }
 

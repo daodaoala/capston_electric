@@ -2,13 +2,13 @@
   <div>
     <div>
         <b-form-group label="전력 사용량 예측" >  
-            <b-form-checkbox-group id="checkbox-group-2" v-model="selected" name="flavour-2">
+            <!-- <b-form-checkbox-group id="checkbox-group-2" v-model="selected" name="flavour-2">
               <b-form-checkbox value="graph-check">그래프 보기</b-form-checkbox>
               <b-form-checkbox value="info-check">수치 정보 보기</b-form-checkbox>
-            </b-form-checkbox-group>
+            </b-form-checkbox-group> -->
         </b-form-group>
     </div>
-    <b-row align-v="stretch">
+  <b-row align-v="stretch">
         <b-col cols="12" md="10">
           <b-row>
             <b-col cols="6">
@@ -18,35 +18,26 @@
                     <b-input-group class="mb-3">
                         <b-form-input
                             id="example-input"
-                            v-model="date"
+                            v-model="value"
                             type="text"
                             placeholder="YYYY-MM-DD"
                             autocomplete="off"
                         ></b-form-input>
                     <b-input-group-append>
-                     <!--  <date-pick v-model="date"></date-pick>
-                         <b-form-datepicker
+                        <b-form-datepicker
                             v-model="value"
                             button-only
                             right
                             locale="en-US"
                             aria-controls="example-input"
                             @context="onContext"
-                        ></b-form-datepicker> -->
+                        ></b-form-datepicker>
                     </b-input-group-append>
                     </b-input-group>
-                     <!-- <base-input label="Date picker">
-                    <flat-picker slot-scope="{focus, blur}"
-                                @on-open="focus"
-                                @on-close="blur"
-                                :config="{allowInput: true}"
-                                class="form-control datepicker"
-                                v-model="dates.simple">
-                    </flat-picker>
-                  </base-input> -->
-                  </b-col> 
+                  </b-col>
               </b-row>
             </b-col>
+            
           </b-row>
         </b-col>
 
@@ -54,7 +45,6 @@
             <b-button size="lg" variant="primary" style="height:60%;width:60%">조회</b-button>
         </b-col>
     </b-row>
-            
 
     <div class="row">
       <div class="col-12">

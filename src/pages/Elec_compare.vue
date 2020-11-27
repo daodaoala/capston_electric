@@ -2,10 +2,10 @@
   <div>
     <div>
         <b-form-group label="예측 전력 사용량 비교" >  
-            <b-form-checkbox-group id="checkbox-group-2" v-model="selected" name="flavour-2">
+            <!-- <b-form-checkbox-group id="checkbox-group-2" v-model="selected" name="flavour-2">
               <b-form-checkbox value="graph-check">그래프 보기</b-form-checkbox>
               <b-form-checkbox value="info-check">수치 정보 보기</b-form-checkbox>
-            </b-form-checkbox-group>
+            </b-form-checkbox-group> -->
         </b-form-group>
     </div>
     
@@ -95,6 +95,7 @@
             </b-col>
           </b-row>
         </b-col>
+        
         <b-col cols="12" md="2">
             <b-button size="lg" variant="primary" style="height:60%;width:60%">조회</b-button>
         </b-col>

@@ -161,10 +161,10 @@
 .input-group-btn:first-child > .btn:not(:first-child) {
     border-left: 0 none;
 }
-.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+.form-control[disabled],.form-control[readonly], fieldset[disabled] .form-control {
     background-color: $black-states;
     color: $default;
-    cursor: not-allowed;
+    //cursor: not-allowed;
 }
 
 .input-group-btn .btn{

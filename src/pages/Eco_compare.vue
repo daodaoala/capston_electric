@@ -2,10 +2,10 @@
   <div>
     <div>
         <b-form-group label="다른 요금제와 비교" >  
-            <b-form-checkbox-group id="checkbox-group-2" v-model="selected" name="flavour-2">
+            <!-- <b-form-checkbox-group id="checkbox-group-2" v-model="selected" name="flavour-2">
               <b-form-checkbox value="graph-check">그래프 보기</b-form-checkbox>
               <b-form-checkbox value="info-check">수치 정보 보기</b-form-checkbox>
-            </b-form-checkbox-group>
+            </b-form-checkbox-group> -->
         </b-form-group>
     </div>
     
@@ -96,9 +96,9 @@
           </b-row>
           
           <b-row>
-            <b-col cols="8">
+            <b-col cols="7">
               <b-row>
-                <b-col sm="2">비교 요금제 선택</b-col>
+                <b-col sm="2">비교 요금제</b-col>
                   <b-col sm="20"> <b-form-group>
                     <b-form-radio-group 
                         id="payment_compare"

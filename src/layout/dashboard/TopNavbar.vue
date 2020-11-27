@@ -95,7 +95,8 @@
               </li> -->
               <div class="dropdown-divider"></div>
               <li class="nav-link">
-                <a href="profile" class="nav-item dropdown-item">Log in</a>
+                <!-- <router-link v-on:click.native="doSomethingCool" to="/profile">Log in</router-link> -->
+                <a v-bind:href="link_sign" class="nav-item dropdown-item">Log in</a>
               </li>
             </base-dropdown>
           </ul>
@@ -149,6 +150,9 @@
       toggleMenu() {
         this.showMenu = !this.showMenu;
       }
+    },
+    data () {
+      link_sign = 'http://localhost:8081/#/profile'
     }
   };
 </script>

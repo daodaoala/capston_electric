@@ -2,10 +2,10 @@
   <div>
     <div>
         <b-form-group label="입력변수 데이터 통계" >  
-            <b-form-checkbox-group id="checkbox-group-2" v-model="selected" name="flavour-2">
+            <!-- <b-form-checkbox-group id="checkbox-group-2" v-model="selected" name="flavour-2">
               <b-form-checkbox value="graph-check">그래프 보기</b-form-checkbox>
               <b-form-checkbox value="info-check">수치 정보 보기</b-form-checkbox>
-            </b-form-checkbox-group>
+            </b-form-checkbox-group> -->
         </b-form-group>
     </div>
     
