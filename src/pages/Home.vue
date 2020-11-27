@@ -26,21 +26,6 @@
       <b-carousel-slide img-src="https://cdn.pixabay.com/photo/2016/03/29/16/49/electricity-1288717_960_720.jpg">
         <h1 class=text3>대학 및 지역사회에 친환경 문화 전파를 위한 참여 확산</h1>
       </b-carousel-slide>
-
-      <!-- Slides with img slot -->
-      <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment
-
-      <b-carousel-slide>
-        <template #img>
-          <img
-            class="d-block img-fluid w-100"
-            width="1024"
-            height="480"
-            src="https://cdn.pixabay.com/photo/2018/05/11/09/07/technology-3389917_960_720.jpg"
-            alt="image slot"
-          >
-        </template>
-      </b-carousel-slide>-->
     </b-carousel>
     
 
@@ -77,8 +62,6 @@
 
     <b-jumbotron>
       <template><img src="@/assets/no_image.jpg" ></template>
-      <!-- <template #header>
-      </template> -->
       <template #lead>
       
       </template>
@@ -125,26 +108,26 @@ a {
   font-size: 18px;
 }
 .text3{
-  margin-bottom: 15px;
+  margin-bottom: 40px;
 }
 .text2{
-  margin-bottom: 50px;
+  margin-bottom: 130px;
 }
 .text1{
-  margin-bottom: 115px;
+  margin-bottom: 150px;
 }
 h1{
   text-align: center;
   padding: 0 0 250px 0;  
   font-family: 'BMDOHYEON';
-  font-size: 23px;
+  font-size: 25px;
 }
 .Cards{
   margin: 30px 0 30px 0;
   padding: 10px;
 }
 .card-title {
-font-family: 'Jua', sans-serif;
+  font-family: 'Jua', sans-serif;
 }
 .card-text{
  font-family: 'Jua', sans-serif;

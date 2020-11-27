@@ -88,11 +88,52 @@
                 </p>
               </a>
               <li class="nav-link">
-                <a href="#" class="nav-item dropdown-item">Profile</a>
+                <a href="#" v-b-modal.modal-sm class="nav-item dropdown-item">Log in</a>
+                 <b-modal class=loginModal id="modal-sm" size="sm" background="black" centered title="로그인">
+                  <i class="tim-icons icon-single-02 text-primary" style="font-size: 60px" ></i>
+                   <!-- <form name="form" @submit.prevent="handleLogin"> v-validate="'required'" -->
+                  <div class="form-group">
+                    <label class=label1 for="username">ID</label>
+                     <input
+                        type="text"
+                        v-model="id"
+                        :state="idState"
+                        align="center"
+                        name="id"
+                        aria-describedby="input-live-help input-live-feedback"
+                    />
+                  </div> 
+
+                  <div class="form-group1">
+                    <label class=label1 for="password">Password</label>
+                      <input
+                        id="input-live2"
+                        type="password"
+                        maxlength="13"
+                        name="password"
+                        align="center"
+                        :state="passwordState"
+                        aria-describedby="input-live2-help input-live2-feedback"
+                        v-model="password"
+                      />
+                    <!-- <div
+                        class="alert alert-danger"
+                        role="alert"
+                        v-if="errors.has('password')"
+                    >Password is required!</div>-->
+                  </div> 
+                  <!-- <div class="form-group">
+                   <button class="btn btn-primary btn-block" :disabled="loading">
+                    <span class="spinner-border spinner-border-sm" v-show="loading"></span>
+                      <span>Login</span>
+                  </button>
+                  </div> -->
+        <div class="form-group">
+          <div class="alert alert-danger" role="alert" v-if="message">{{message}}</div>
+        </div>
+  
+                </b-modal>
               </li>
-              <!-- <li class="nav-link">
-                <a href="#" class="nav-item dropdown-item">Settings</a>
-              </li> -->
               <div class="dropdown-divider"></div>
               <li class="nav-link">
                 <!-- <router-link v-on:click.native="doSomethingCool" to="/profile">Log in</router-link> -->
@@ -158,4 +199,32 @@
 </script>
 <style scoped>
  @import url('https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap');
+ @font-face {
+    font-family: 'BMDOHYEON';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMDOHYEON.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+ .loginmodal{
+   background: blueviolet;
+   border: 2px dashed;
+ }
+ .icon-single-02{
+   margin-top: -40px;;
+ }
+ .form-group{
+   margin-top: 60px;
+   margin-left: 19px;
+ }
+ .form-group1{
+   margin-top: 40px;
+   margin-right: 41px;
+ }
+ label{
+   margin-right: 30px;
+   font-family: 'BMDOHYEON';
+ }
+ .label1{
+   color: rgb(47, 103, 177);
+ }
 </style>

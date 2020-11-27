@@ -114,7 +114,7 @@
         </b-col> 
 
         <b-col cols="12" md="2">
-            <b-button size="lg" variant="primary" style="height:50%;width:60%">조회</b-button>
+            <b-button size="lg" variant="primary" style="height:45%;width:60%">조회</b-button>
         </b-col>
     </b-row>
 

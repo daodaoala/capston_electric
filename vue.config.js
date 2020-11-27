@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin');
 
 module.exports = {
   lintOnSave: false,
@@ -12,7 +13,16 @@ module.exports = {
     plugins: [
       new webpack.optimize.LimitChunkCountPlugin({
         maxChunks: 6
-      })
+      }),
+      new HtmlWebpackExternalsPlugin({
+        externals: [
+          {
+            module: 'daum-postcode-api',
+            entry: 'http://dmaps.daum.net/map_js_init/postcode.v2.js',
+            global: 'daum-postcode-api',
+          },
+        ],
+      }),
     ]
   },
   pwa: {

@@ -72,12 +72,12 @@
   margin-bottom: 400px;
   left: 100px;
   width: 100%; // Ensure `.modal-content` extends the full width of the parent `.modal-dialog`
-  height: 300px;
+  height: 400px;
   // counteract the pointer-events: none; in the .modal-dialog
   pointer-events: auto;
-  background-color: $modal-content-bg;
+  background-color: rgb(207, 217, 226);//$modal-content-bg;
   background-clip: padding-box;
-  border: $modal-content-border-width solid $modal-content-border-color;
+  border: 2px dashed;//$modal-content-border-width dashed $modal-content-border-color;
   @include border-radius($modal-content-border-radius);
   @include box-shadow($modal-content-box-shadow-xs);
   // Remove focus outline from opened modal
